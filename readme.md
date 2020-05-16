@@ -28,6 +28,15 @@ echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 echo 'Defaults:jenkins !requiretty' >> /etc/sudoers
 setenforce 0 # Else disable SELINUX in /etc/sysconfig/selinux  and reboot
  ```
+ **Prerequisites**: (These are specific requirements for Ubuntu 18 Linux Servers)
+ 
+ 1. Install Maven & JDK in the Jenkins Server.
+ ```
+ apt install maven
+ apt install default-jdk
+ ```
+ 
+ 
  **Execution**:
 Add a Jenkins Build Job As per the below screenshot and build it:
  - Note: Add the build commands from the **jenkins_build_commands.md** file.
